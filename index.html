@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>portfolio: jade</title>
+<style>
+  body {
+    font-family: 'Lucida Console', monospace;
+  }
+  img {
+    max-width: 300px;
+    margin-bottom: 10px;
+  }
+  .image-text {
+    display: flex;
+    align-items: center;
+  }
+  .text-container {
+    margin-left: 20px;
+  }
+  .click-link {
+    text-decoration: underline;
+    color: black;
+  }
+  .collapsible {
+    cursor: pointer;
+    text-decoration: underline;
+    color: black;
+  }
+  .content {
+    display: none;
+    margin-top: 10px;
+  }
+</style>
+<body>
+<h1>I am looking for software dev positions, Jade.</h1>
+<h6>anything underlined is clickable</h6>
+<hr>
+<h2>About me.</h2>
+<ul>
+    <li>junior @ york u as a honours bsc cs undergrad</li>
+    <li>thorough learner</li>
+    <li>working on a android app i call CARTMAN</li>
+      <ul>
+        <li><p><i><strong>C</strong>omputer vision <strong>A</strong>ssisted <strong>R</strong>ep <strong>T</strong>racking ... <strong>MAN</strong></p></li>
+        
+      </ul>
+    <li><a class="click-link" href="Jade Pablo.pdf" target="_blank">click here</a> for my resume</li>
+</ul>
+<hr>
+<h2>Contact.</h2>
+<ul>
+  <li><a class="click-link" href="https://www.linkedin.com/in/JadePablo/" target="_blank">linkedin</a></li>
+  <li><a class="click-link" href="https://github.com/JadePablo/" target="_blank">github</a></li>
+  <li>Email: jadepablocontact@gmail.com      </li>
+</ul>
+<hr>
+<h2>These are my interests.</h2>
+<div class="image-text">
+  <img src="wordmap.jpg" alt="Word Map Image">
+  <div class="text-container">
+    <p>bigger words = higher hashtag frequency in my tiktok liked posts</p>
+    <p> <a class="click-link" href="https://github.com/JadePablo/tiktok_use_analysis" target="_blank">*i analyzed my tiktok use using python</a></p>
+    <p><a class="click-link" href="https://app.powerbi.com/view?r=eyJrIjoiOTI0MzY3NTYtNTg0Ny00ODc5LWFmMzMtZDk2NDc5OTgxODAyIiwidCI6IjM0NTMxMzE4LTcwMTEtNGZkNC04N2YwLWE0MzgxNmM0OWJkMCJ9" target="_blank">click here</a> to visit the full report on powerbi web and learn more about my interests</p>
+  </div>
+</div>
+<hr>
+
+<h2>Assorted Skills.</h2>
+<ul>
+  <li><strong>Languages: </strong>Java, Python, C, JavaScript, SQL, Kotlin, html, css</li>
+  <li><strong>Frameworks & Libraries: </strong> Next.js, React, Node.js, Express.js, Jest, Robot, Expo</li>
+  <li><strong>Tools: </strong>Git, Linux, AWS (Lambda), GCP (Authentication, Functions), CI / CD, Postman, Gradle, Maven</li>
+</ul>
+<hr>
+
+<h2>Work experience.</h2>
+<hr>
+<p>None :( , apart from my projects.</p>
+<hr>
+
+<h2>Projects.</h2>
+<hr>
+<h3><b>prtracker</b></h3>
+<p><i>social media to rank sbd pr's against other people</i></p>
+<p>
+  <a class="click-link" href="https://prtracker.vercel.app/" target="_blank">try it live</a> | 
+  <a class="click-link" href="https://github.com/JadePablo/prtracker/tree/main" target="_blank">github repo: app</a> |
+</p>
+<strong><p>FEATURES:</p></strong>
+<ul>
+
+  <li>
+    <span class="collapsible" onclick="toggleContent('pipeline')">post verification pipeline</span>
+    <div class="content" id="pipelineContent">
+      <p>
+        the following verification pipeline is made possible using react, a next.js internal api and the cloudinary api for user & video state management:
+        <ol>
+          <li>User uploads a video of their pr.</li>
+          <li>Judges are notified and access a secure dashboard to review the submission.</li>
+          <li>Judges can choose to verify the video, which will make it visible in the app.</li>
+          <li>Alternatively, judges can reject the video, leading to its deletion from both the MongoDB and Cloudinary databases.</li>
+          <li>In extreme cases, judges can also ban the user from posting and deleting their video from the Cloudinary database.</li>
+        </ol>
+      </p>
+    </div>
+  </li>
+  <br>
+  <li>
+    <span class="collapsible" onclick="toggleContent('automatedEmails')">event-driven emailing system</span>
+    <div class="content" id="automatedEmailsContent">
+      <p>
+        Used react and nodemailer to send out email notifications for the following scenarios:
+        <ul>
+          <li>judges are notified to check their dashboards when a user submits a pr</li>
+          <li>users get notified when someone beats their pr at a certain gym</li>
+          <li>users are updated with the judge's decision son their submissions</li>
+        </ul>
+      </p>
+    </div>
+    
+  </li>
+  <br>
+  <li>
+    <span class="collapsible" onclick="toggleContent('vidStorage')">cloudinary video storage</span>
+    <div class="content" id="vidStorageContent">
+      <p>
+        integrated cloudinary storage into the app. Used the cloudinary api with the next.js internal api to handle video uploads and deletions.
+      </p>
+    </div>
+  </li>
+</ul>
+
+<hr>
+
+<h3><b>diario / diaryia</b></h3>
+<p><i>journalling enhanced with natural language processing</i></p>
+<p>
+  <a class="click-link" href="https://diario-mxz8.onrender.com/" target="_blank">try it live</a> | 
+  <a class="click-link" href="https://github.com/JadePablo/diary2" target="_blank">github repo: app</a> |
+  <a class="click-link" href="https://github.com/JadePablo/diario_yearly_email_cloud_function/tree/main" target="_blank">github repo: cloud function</a> |
+</p>
+<strong><p>FEATURES:</p></strong>
+<ul>
+    <li>
+      <span class="collapsible" onclick="toggleContent('nlp')">Automated NLP Analysis & Personalized Email Insights</span>
+      <div class="content" id="nlpContent">
+        <p>
+            created a yearly cron job to trigger a Google Cloud function written in Python. Which does Natural Language Processing (NLP) analysis to get the following insights on a user's journal entries:
+            <ul>
+                <li>top 5 talked about topics</li>
+                <li>top 5 detected emotion in writing</li>
+                <li>most frequently detected sentiments</li>
+                <li>top 5 talked about named-entities (people,places events)</li>
+            </ul>
+            <br>
+            These insights are then emailed directly to the respective Gmail accounts of the users.
+        </p>
+      </div>
+    </li>
+    <br>
+    <li>
+      <span class="collapsible" onclick="toggleContent('auth')">Google Auth & REST api for react front-end</span>
+      <div class="content" id="authContent">
+        <p>
+          Implemented a REST API with CRUD capabilities to:
+          <ul>
+            <li>coordinate the google login authentication process</li>
+            
+            <li>encrypt and store entries to MongoDB</li>
+            <li>retrieve and decrypt entries from MongoDB</li>
+          </ul>
+          <br>
+          all of which are processes needed by the react front-end.
+        </p>
+      </div>
+    </li>
+</ul>
+<hr>
+<h3><b>personal Tiktok Data Mining</b></h3>
+<p><i>my tiktok usage, behavioural and interest analysis</i></p>
+<a class="click-link" href="https://app.powerbi.com/view?r=eyJrIjoiOTI0MzY3NTYtNTg0Ny00ODc5LWFmMzMtZDk2NDc5OTgxODAyIiwidCI6IjM0NTMxMzE4LTcwMTEtNGZkNC04N2YwLWE0MzgxNmM0OWJkMCJ9"  target="_blank">powerbi web dashboard</a> | 
+<a class="click-link" href="https://github.com/JadePablo/tiktok_use_analysis" target="_blank">github repo: python notebook</a>
+<strong><p>WHAT I DID:</p></strong>
+
+<ul>
+  <li>
+     Parsed the JSON file containing my info using pandas.
+  </li>
+  <br>
+  <li>Retrieved TikTok web link content using Python's requests library.
+  </li>
+  <br>
+  <li>Conducted hashtag analysis on liked posts and performed sentiment analysis on comments using
+    pre-trained VADER and textblob models.
+    </li>
+    <br>
+  <li>Processed and cleaned data using pandas for effective analysis.
+  </li>
+  <br>
+  <li>Visualized usage patterns and insights using Power BI dashboards</li>
+</ul>
+<hr>
+<h3><b>six degrees of kevin bacon rest api</b></h3>
+<p>a software design group project</p>
+
+<strong><p>WHAT I DID:</p></strong>
+
+<ul>
+  <li>
+    Managed the Git Workflow between group members. 
+  </li>
+  <br>
+  <li>Created internal tools using java to reduce code redundancy
+    </li>
+  <br>
+  <li>Automated pushes to main branch using a CI/CD pipeline with Github Actions and Robot testing</li>
+</ul>
+<script>
+function toggleContent(contentId) {
+  var content = document.getElementById(contentId + 'Content');
+  if (content.style.display === "none" || content.style.display === "") {
+    content.style.display = "block";
+  } else {
+    content.style.display = "none";
+  }
+}
+</script>
+</body>
+</html>
